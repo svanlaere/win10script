@@ -3,4 +3,4 @@ This is a PowerShell script for automation of routine tasks done after fresh ins
 
 ## Description
 This is a PowerShell script for automation of routine tasks done after fresh installations of Windows 10.  
-It installs applications and enables tweaks that I like, feel free to fork it and edit it for own usage.
+It installs applications and enables tweaks that I like, feel free to fork and edit it for own usage.
