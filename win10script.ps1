@@ -3,10 +3,22 @@
 ### 0 = uninstall
 ### remove or comment out unwanted apps
 $apps = @{
-    CCleaner   = 1;
-    Potplayer  = 1;
-    SumatraPDF = 1;
-    7Zip       = 1;
+    7Zip         = 1;
+    CCleaner     = 1;
+    Chromium     = 1;
+    Discord      = 1;
+    Dropbox      = 1;
+    EqualizerApo = 1;
+    Firefox      = 1;
+    HandBrake    = 1;
+    NVDA         = 1;
+    PeaZip       = 1;
+    Potplayer    = 1;
+    PowerToys    = 1;
+    SumatraPDF   = 1;
+    Thunderbird  = 1;
+    VSCode       = 1;
+    WinCDEmu     = 1;
 }
 
 ### Enable or disable tweaks
