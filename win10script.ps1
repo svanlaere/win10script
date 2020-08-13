@@ -17,7 +17,7 @@ $tweaks = @{
 function LoadTweaks {
     Write-Output "Load Tweaks"
     Import-Module BitsTransfer
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ooshutup10.cfg" -Destination tweaks.psm1
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/svanlaere/win10script/master/tweaks.psm1" -Destination tweaks.psm1
     Import-Module ./tweaks.psm1
 }
 
