@@ -1,14 +1,18 @@
 ### Upgrade or uninstall applications
-### 1 = upgrade (or install)
+### 1 = upgrade or install
 ### 0 = uninstall
+### remove or comment out unwanted apps
 $apps = @{
+    CCleaner   = 1;
     Potplayer  = 1;
     SumatraPDF = 1;
+    7Zip       = 1;
 }
 
 ### Enable or disable tweaks
 ### 1 = enable
 ### 0 = disable
+### remove or comment out unwanted tweaks
 $tweaks = @{
     OOShutup = 1;
     Defender = 1;
@@ -27,9 +31,11 @@ function InstallChocolatey {
 function InstallApps {
     foreach ($app in $apps.keys) {
         if ($apps.$app -contains $true) {
+            Write-Output "Installing or upgrading $app..."
             choco upgrade $app.ToLower() -y
         }
         elseif ($apps.$app -contains $false) {
+            Write-Output "Unstalling $app..."
             choco uninstall $app.ToLower() -x
         }
     }
