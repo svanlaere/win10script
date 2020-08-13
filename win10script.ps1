@@ -13,14 +13,6 @@ $tweaks = @{
     OOShutup = 1;
     Defender = 1;
 }
-
-function LoadTweaks {
-    Write-Output "Load Tweaks"
-    Import-Module BitsTransfer
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/svanlaere/win10script/master/tweaks.psm1" -Destination tweaks.psm1
-    Import-Module ./tweaks.psm1
-}
-
 function InstallChocolatey {
     $testchoco = powershell choco -v
     if (-not($testchoco)) {
@@ -32,7 +24,6 @@ function InstallChocolatey {
         Write-Output "Chocolatey Version $testchoco is already installed"
     }
 }
-
 function InstallApps {
     foreach ($app in $apps.keys) {
         if ($apps.$app -contains $true) {
@@ -43,7 +34,12 @@ function InstallApps {
         }
     }
 }
-
+function LoadTweaks {
+    Write-Output "Load Tweaks"
+    Import-Module BitsTransfer
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/svanlaere/win10script/master/tweaks.psm1" -Destination tweaks.psm1
+    Import-Module ./tweaks.psm1
+}
 function ApplyTweaks {
     foreach ($tweak in $tweaks.keys) {
         $params = '-enable'
