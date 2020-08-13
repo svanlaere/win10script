@@ -33,7 +33,8 @@ function Defender {
             Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "SecurityHealth" -ErrorAction SilentlyContinue
         }
     }
-    elseif ($enable -eq $false) {
+    
+    if ($enable -eq $false) {
         Write-Output "Enabling Windows Defender..."
         Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -ErrorAction SilentlyContinue
         If ([System.Environment]::OSVersion.Version.Build -eq 14393) {
