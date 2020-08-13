@@ -52,6 +52,7 @@ function ApplyTweaks {
     }
 }
 
-#InstallChocolatey
-#InstallApps
-#ApplyTweaks
+InstallChocolatey
+InstallApps
+LoadTweaks
+ApplyTweaks
