@@ -11,6 +11,8 @@ $apps = @{
     EqualizerApo = 1;
     Firefox      = 1;
     HandBrake    = 1;
+    Laragon      = 1;
+    MPC-HC       = 1;
     NVDA         = 1;
     PeaZip       = 1;
     Potplayer    = 1;
@@ -26,8 +28,12 @@ $apps = @{
 ### 0 = disable
 ### remove or comment out unwanted tweaks
 $tweaks = @{
-    OOShutup = 1;
-    Defender = 1;
+    OOShutup    = 1;
+    Defender    = 1;
+    SmartScreen = 1;
+    Telemetry   = 1;
+    WebSearch   = 1;
+    WiFiSense   = 1;
 }
 function InstallChocolatey {
     $testchoco = powershell choco -v
