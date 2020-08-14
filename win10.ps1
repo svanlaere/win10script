@@ -23,17 +23,28 @@ $apps = @{
     WinCDEmu     = 1;
 }
 
-### Enable or disable tweaks
-### 1 = enable
-### 0 = disable
+### Apply or rollback tweaks
+### 1 = apply tweak
+### 0 = rollback tweak (to default)
 ### remove or comment out unwanted tweaks
 $tweaks = @{
-    OOShutup    = 1;
-    Defender    = 1;
-    SmartScreen = 1;
-    Telemetry   = 1;
-    WebSearch   = 1;
-    WiFiSense   = 1;
+    ActivityHistory     = 1;
+    AdvertisingID       = 1;
+    AppSuggestions      = 1;
+    BackgroundApps      = 1;
+    Cortana             = 1;
+    Defender            = 1;
+    DiagnosticsTracking = 1;
+    ErrorReporting      = 1;
+    Feedback            = 1;
+    LocationTracking    = 1;
+    MapUpdates          = 1;
+    OOShutup            = 1;
+    SmartScreen         = 1;
+    TailoredExperiences = 1;
+    Telemetry           = 1;
+    WebSearch           = 1;
+    WiFiSense           = 1;
 }
 function InstallChocolatey {
     $testchoco = powershell choco -v
